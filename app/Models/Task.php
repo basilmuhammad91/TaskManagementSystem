@@ -11,6 +11,7 @@ class Task extends Model
 
     protected $fillable = [
         'name',
+        'is_completed'
     ];
 
     public function users()

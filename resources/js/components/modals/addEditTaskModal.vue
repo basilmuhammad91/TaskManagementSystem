@@ -66,6 +66,18 @@
                   v-html="form.errors.get('assign_to')"
                 />
               </div>
+
+              <div class="form-group">
+                <label>Completed?</label>
+                <input
+                  type="checkbox"
+                  true-value="1"
+                  false-value="0"
+                  v-model="form.is_completed"
+                  name="is_completed"
+                  class="form-control"
+                />
+              </div>
               
             </div>
             <div class="modal-footer">
@@ -121,6 +133,7 @@ export default {
         id: "",
         name: '',
         assign_to: [],
+        is_completed: false,
       }),
     };
   },

@@ -64,7 +64,13 @@
                       }"
                     >
 
+
+                    <template #item.is_completed="{ item }">
+                      <span>{{ (item.is_completed == true || item.is_completed == 1) ? 'Yes' : 'No' }}</span>
+                    </template>
+                    
                       <template v-slot:item.actions="{ item }">
+
                         <v-icon
                           color="green"
                           class="edit-icon mr-2"
@@ -142,6 +148,7 @@ export default {
       headers: [
         { text: this.$t("message.NAME"), value: "name" },
         { text: this.$t("message.USER"), value: "user.name" },
+        { text: "Completed", value: "is_completed" },
         {
           text: this.$t("message.ACTIONS"),
           value: "actions",

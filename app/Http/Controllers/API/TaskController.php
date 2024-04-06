@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\TaskUser;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
@@ -36,13 +38,9 @@ class TaskController extends Controller
             }
         }
         else{
-            $task=Task::with(['user', 'users']);
-            $task->where(function($query) {
-                $query->where('user_id', auth()->user()->id)
-                      ->orWhereHas('users', function($query) {
-                          $query->where('id', auth()->user()->id);
-                      });
-            });
+            $taskUserIds = TaskUser::where('user_id', auth()->user()->id)->pluck('task_id');
+            $task=Task::with(['user', 'users'])->whereIn('id', $taskUserIds)
+            ->orWhere('user_id', auth()->user()->id);
             if($request->search!=""){
                 $task->where( 'name', 'LIKE', '%' . $request->search . '%' );
             }
@@ -88,6 +86,7 @@ class TaskController extends Controller
     
         $task = new Task();
         $task->name = $request->name;
+        $task->is_completed = $request->is_completed;
         $task->user_id = auth()->user()->id;
         $task->save();
     
@@ -132,8 +131,10 @@ class TaskController extends Controller
             'name' => 'required|string|max:64',
         ]);
 
-        $task->name = $request->name;
-        $task->save();
+        $task->update([
+            'name' => $request->name,
+            'is_completed' => $request->is_completed,
+        ]);        
 
         $userIds = $request->input('assign_to', []);
         $ids = collect($userIds)->pluck('id');
