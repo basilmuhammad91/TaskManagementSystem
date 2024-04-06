@@ -1,0 +1,19 @@
+.onlyForPrint{
+    display: none;
+}
+.print-header{
+    display: flex;
+    margin-bottom: 50px;
+    .printLogo{
+        width: 150px;
+    }
+    .printCompanyName{
+        width: 100%;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+}

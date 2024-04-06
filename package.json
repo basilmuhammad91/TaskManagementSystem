@@ -1,0 +1,52 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@mdi/font": "^5.9.55",
+        "@nuxtjs/vuetify": "^1.12.1",
+        "axios": "^0.21.1",
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.6",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.21",
+        "popper.js": "^1.16.1",
+        "postcss": "^8.1.14",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.32.11",
+        "sass-loader": "^11.0.1",
+        "vue": "^2.6.12",
+        "vue-loader": "^15.9.8",
+        "vue-router": "^3.5.2",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "admin-lte": "^3.1.0",
+        "bootstrap-vue": "^2.21.2",
+        "laravel-vue-pagination": "^2.3.1",
+        "luxon": "^2.0.2",
+        "moment": "^2.29.1",
+        "sweetalert2": "^11.1.4",
+        "vee-validate": "^3.4.11",
+        "vform": "^2.1.1",
+        "vue-datetime": "^1.0.0-beta.14",
+        "vue-excel-export": "^0.1.3",
+        "vue-html-to-paper": "^1.4.3",
+        "vue-i18n": "^8.25.0",
+        "vue-progressbar": "^0.7.5",
+        "vue-select": "^3.12.3",
+        "vue2-filters": "^0.13.0",
+        "vuejs-datepicker": "^1.6.2",
+        "vuex": "^3.6.2",
+        "vuex-persistedstate": "^4.0.0",
+        "weekstart": "^1.1.0"
+    }
+}

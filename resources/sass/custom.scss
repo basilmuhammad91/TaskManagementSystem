@@ -1,0 +1,190 @@
+//Navbar
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+.primary-name{
+    color: rgba(0, 0, 0, 0.5);
+}
+.primary-logo{
+    width: 100px;
+}
+.m0auto{
+    margin: 0 auto;
+}
+//Override Admin-LTE
+.navbar-expand .navbar-nav .nav-link{
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+.dropdown-menu-lg {
+    min-width: 280px !important;
+    max-width: 300px !important;
+    padding: 0 !important;
+}
+.dropdown-footer, .dropdown-header {
+    text-align: center !important;
+    display: block !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+}
+.navbar-badge {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    font-size: .6rem;
+    font-weight: 300;
+    padding: 2px 4px;
+}
+.badge-warning {
+    color: #1f2d3d;
+    background-color: #ffc107;
+}
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+.card-title {
+    margin-bottom: 0;
+}
+.small-box h3{
+    font-size: 30px;
+}
+.alert-info, .bg-info, .label-info {
+    background-color: #17a2b8 !important
+}
+.alert-success, .bg-success, .label-success {
+    background-color: #28a745 !important;
+}
+.alert-warning, .bg-warning, .label-warning {
+    background-color: #ffc107 !important;
+}
+.alert-danger, .alert-error, .bg-danger, .label-danger {
+    background-color: #dc3545 !important;
+}
+.total-sales-block {
+    background-color: #cc135a !important;
+    color: white;
+}
+.total-purchases-block {
+    background-color: #1785b8 !important;
+    color: white;
+}
+.total-paid-block {
+    background-color: #28a745 !important;
+    color: white;
+}
+.total-receivable-block {
+    background-color: #daa814 !important;
+    color: white;
+}
+.total-block-receivable-block {
+    background-color: purple !important;
+    color: white;
+}
+
+.total-block-expenses-block {
+    background-color: rgb(204, 62, 52) !important;
+    color: white;
+}
+//Override Bootstrap Styles
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: none !important;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+    ul.pagination{
+        margin-bottom: 0;
+    }
+}
+.modal{
+    z-index: 9998 !important;
+}
+.swal2-container{
+    z-index: 9999 !important;
+}
+.searchBox{
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+// Sidebar Nav Links
+.router-link-exact-active{
+    color: #ffffff !important;
+    background-color: #007bff;
+}
+//Content
+.content-wrapper{
+    min-height: 10px;
+    // min-height: 575px;
+}
+.pagination-container{
+    text-align: center;
+    padding: 10px;
+}
+//Borders
+// .bordered{
+//     border: 1px solid $rop-border;
+// }
+// .bordered-bottom{
+//     border-bottom: 1px solid $rop-border;
+// }
+// Date Validation
+.bgwhite{
+    background-color: #fff !important;
+}
+.invalid-feedback{
+    display: block !important;
+    font-size: 0.8em;
+}
+//Datetime
+.datetime_input{
+    input{
+        border: none !important;
+        width: 100% !important;
+    }
+}
+//Modals
+.modalLarge{
+    min-width: 75%;
+}
+.adminTotal{
+    font-weight: bold;
+    font-size: 2em;
+}
+.adminBalance{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #426FAB;
+}
+//No
+.nopadding{
+    padding: 0px !important;
+}
+.nomargin{
+    margin: 0px !important;
+}
+//Language
+.lang-icon{
+    img{
+        width: 30px;
+        height: 20px;
+        float: left;
+        margin-right: 1rem;
+    }
+}
+// Sidebar Nav Links
+.router-link-exact-active{
+    color: #ffffff !important;
+    background-color: #007bff;
+}
+//VForm Error
+.error-message{
+    color: red;
+    font-size: 12px;
+}
+//Unauthorized Alert
+.unauthorized{
+    margin-top: 20px;
+}
