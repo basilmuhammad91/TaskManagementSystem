@@ -24,6 +24,13 @@ export default {
         CREATE_ROLE:"Create Role",
         EDIT_ROLE:"Edit Role",
         VIEW_ROLE:"View Role",
+        //TASKS
+        TASKS:"Tasks",
+        TASK: "Task",
+        ADD_TASK:"Add Task",
+        CREATE_TASK:"Create Task",
+        EDIT_TASK:"Edit Task",
+        VIEW_TASK:"View Task",
         //PERMISSIONS
         PERMISSION:"Permission",
         PERMISSION_NAME:"Permission Name",

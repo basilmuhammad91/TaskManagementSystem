@@ -12,4 +12,17 @@ class Task extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withTimeStamps();
+    }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User','user_id');
+    }
+
+    public function taskUsers(){
+        return $this->hasMany('App\Models\TaskUser','user_id');
+    }
 }

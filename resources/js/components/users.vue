@@ -290,6 +290,8 @@ export default {
     },
   },
   created() {
+
+    console.log("MOUNTED...")
     Fire.$on("reloadUsers", () => {
       this.getResults(this.curpage);
     });

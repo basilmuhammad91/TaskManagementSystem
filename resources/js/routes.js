@@ -12,7 +12,7 @@ const routes = [
         name: 'users', path: '/users', component: require('./components/users.vue').default
     },
     {
-        name: 'tasks', path: '/tasks', component: require('./components/users.vue').default
+        name: 'tasks', path: '/tasks', component: require('./components/tasks.vue').default
     },
     {
         name: 'settings', path: '/settings', component: require('./components/settings.vue').default

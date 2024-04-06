@@ -64,26 +64,7 @@
                       }"
                     >
 
-                    <!-- City -->
-                      <template #item.city="{ item }">
-                          <span v-if="item.city"> {{ item.city.name }} </span>
-                          <span v-else> - </span>
-                      </template>
-
-
                       <template v-slot:item.actions="{ item }">
-                        
-                        <!-- Upload Files -->
-                        <v-icon
-                          color="blue"
-                          class="edit-icon mr-2"
-                          small
-                          @click="uploadFile(item.id)"
-                          v-if="is('Super Admin') || can('create_task')"
-                        >
-                          mdi-upload
-                        </v-icon>
-
                         <v-icon
                           color="green"
                           class="edit-icon mr-2"
@@ -160,7 +141,7 @@ export default {
       task_id: "",
       headers: [
         { text: this.$t("message.NAME"), value: "name" },
-        { text: this.$t("message.CITY"), value: "city" },
+        { text: this.$t("message.USER"), value: "user.name" },
         {
           text: this.$t("message.ACTIONS"),
           value: "actions",
